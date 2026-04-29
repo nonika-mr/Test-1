@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      color: #202124;
+      background: #fff;
+    }
+
+    header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 15px 20px;
+      gap: 15px;
+      font-size: 14px;
+    }
+
+    header a {
+      text-decoration: none;
+      color: #202124;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    .icon:hover {
+      opacity: 1;
+    }
+
+    .sign-in {
+  padding: 8px 16px;
+  background: #1a73e8;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sign-in:hover {
+  background: #1765cc;
+}
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo {
+      width: 272px;
+      margin-bottom: 25px;
+    }
+
+    .search-wrapper {
+  position: relative;
+  width: 450px;
+  max-width: 90%;
+}
+
+    .search-box {
+  width: 100%;
+  padding: 12px 38px 12px 40px;
+  border-radius: 24px;
+  border: 1px solid #dfe1e5;
+  outline: none;
+  font-size: 16px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.search-box:hover,
+.search-box:focus {
+  box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+  border-color: transparent;
+}
+
+    .search-box:hover,
+    .search-box:focus {
+      box-shadow: 0 1px 6px rgba(32,33,36,0.28);
+    }
+
+    .search-icon, .mic-icon {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      opacity: 0.6;
+    }
+
+    .search-icon { left: 12px; }
+    .mic-icon { right: 8px; cursor: pointer; }
+
+    .buttons {
+      margin-top: 25px;
+    }
+
+    .buttons button {
+      margin: 5px;
+      padding: 10px 16px;
+      border: 1px solid #f2f2f2;
+      border-radius: 4px;
+      background: #f8f9fa;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .buttons button:hover {
+      border: 1px solid #dadce0;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #f2f2f2;
+      padding: 15px 20px;
+      font-size: 14px;
+    }
+
+    .footer-top {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dadce0;
+}
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #5f6368;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="#">Gmail</a>
+  <a href="#">Images</a>
+
+  <!-- Apps icon -->
+  <svg class="icon" viewBox="0 0 24 24">
+    <circle cx="5" cy="5" r="2"></circle>
+    <circle cx="12" cy="5" r="2"></circle>
+    <circle cx="19" cy="5" r="2"></circle>
+    <circle cx="5" cy="12" r="2"></circle>
+    <circle cx="12" cy="12" r="2"></circle>
+    <circle cx="19" cy="12" r="2"></circle>
+    <circle cx="5" cy="19" r="2"></circle>
+    <circle cx="12" cy="19" r="2"></circle>
+    <circle cx="19" cy="19" r="2"></circle>
+  </svg>
+
+  <!-- Sign In -->
+  <a class="sign-in" href="#">Sign in</a>
+</header>
+
+<div class="main">
+  <img class="logo" src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">
+
+  <div class="search-wrapper">
+    <!-- Search icon -->
+    <svg class="search-icon" viewBox="0 0 24 24">
+      <circle cx="11" cy="11" r="7" stroke="black" stroke-width="2" fill="none"/>
+      <line x1="16" y1="16" x2="21" y2="21" stroke="black" stroke-width="2"/>
+    </svg>
+
+    <input class="search-box" type="text" placeholder="Search Google or type a URL">
+
+    <!-- Mic icon -->
+    <svg class="mic-icon" viewBox="0 0 24 24" fill="none" stroke="#5f6368" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="2" width="6" height="12" rx="3"></rect>
+      <path d="M5 10a7 7 0 0 0 14 0"></path>
+      <line x1="12" y1="17" x2="12" y2="22"></line>
+    </svg>
+  </div>
+
+  <div class="buttons">
+    <button>Google Search</button>
+    <button>I'm Feeling Lucky</button>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">Georgia</div>
+  <div class="footer-bottom">
+    <div>
+      <a href="#">About</a>
+      <a href="#">Advertising</a>
+      <a href="#">Business</a>
+    </div>
+    <div>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Settings</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
